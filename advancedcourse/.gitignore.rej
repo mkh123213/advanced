@@ -1,0 +1,9 @@
+diff a/advancedcourse/.gitignore b/advancedcourse/.gitignore	(rejected hunks)
+@@ -27,6 +27,7 @@
+ .dart_tool/
+ .flutter-plugins
+ .flutter-plugins-dependencies
++.packages
+ .pub-cache/
+ .pub/
+ /build/
