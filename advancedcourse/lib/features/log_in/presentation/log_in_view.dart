@@ -7,7 +7,12 @@ class LogInView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: LogInViewBody(),
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          child: LogInViewBody(),
+        ),
+      ),
     );
   }
 }
