@@ -1,7 +1,7 @@
+import 'package:advancedcourse/core/routing/routes.dart';
+import 'package:advancedcourse/features/log_in/presentation/log_in_view.dart';
+import 'package:advancedcourse/features/on_boarding/presentation/on_bording_view.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_complete_project/core/routing/routes.dart';
-import 'package:flutter_complete_project/features/login/ui/login_screen.dart';
-import 'package:flutter_complete_project/features/onboarding/onboarding_screen.dart';
 
 class AppRouter {
   Route generateRoute(RouteSettings settings) {
@@ -11,11 +11,11 @@ class AppRouter {
     switch (settings.name) {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(
-          builder: (_) => const OnboardingScreen(),
+          builder: (_) => const OnBordingView(),
         );
       case Routes.loginScreen:
         return MaterialPageRoute(
-          builder: (_) => const LoginScreen(),
+          builder: (_) => const LogInView(),
         );
       default:
         return MaterialPageRoute(
