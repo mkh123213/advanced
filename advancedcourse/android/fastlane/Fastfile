@@ -1,0 +1,24 @@
+
+
+default_platform(:android)
+
+platform :android do
+  desc "Runs all the tests"
+  lane :beta do
+    sh "flutter clean"
+    sh "flutter build apk --release"
+  
+    firebase_app_distribution(
+      app: "1:635886397092:android:56330f34afb9651c2b2831",
+
+      firebase_cli_token: ENV['TOKEN'],
+      android_artifact_path: "../build/app/outputs/apk/release/app-release.apk",
+      testers: "sa.mohammad7567@gmail.com",
+      release_notes: "please update to Version 1.4.0+1"
+  )
+  end
+
+
+
+  
+end

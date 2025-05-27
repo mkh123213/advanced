@@ -8,13 +8,15 @@ class CustomTextFormField extends StatelessWidget {
     Key? key,
     required this.hintText,
     this.ispassword,
-    this.padding, this.suffixIcon,
+    this.padding, this.suffixIcon, required this.validator, this.controller,
   }) : super(key: key);
 
   final String hintText;
   final bool? ispassword;
   final EdgeInsetsGeometry? padding;
   final Widget ? suffixIcon;
+  final  Function(String?) validator;
+  final TextEditingController ? controller;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -35,6 +37,10 @@ class CustomTextFormField extends StatelessWidget {
           borderSide: BorderSide(color: ColorsManager.graylight),
         ),
       ),
+      validator: (value) {
+        return validator(value);
+      },
+      controller: controller,
     );
   }
 }
