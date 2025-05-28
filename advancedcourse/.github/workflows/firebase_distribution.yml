@@ -3,7 +3,7 @@ name: Firebase App Distribution
 on:
   push:
     branches:
-      - main # Trigger this workflow only on push to main branch
+      - development # Trigger this workflow only on push to main branch
 
 jobs:
   Distribute to Firebase:  
