@@ -1,26 +1,26 @@
-name: Flutter Build
+# name: Flutter Build
 
-on:
-  push:
-    branches:
-      - development
-  workflow_dispatch:
+# on:
+#   push:
+#     branches:
+#       - development
+#   workflow_dispatch:
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v3
 
-      - name: Install Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.19.0'
+#       - name: Install Flutter
+#         uses: subosito/flutter-action@v2
+#         with:
+#           flutter-version: '3.19.0'
 
-      - name: Install dependencies
-        run: flutter pub get
+#       - name: Install dependencies
+#         run: flutter pub get
 
-      - name: Build Flutter Web
-        run: flutter build web
+#       - name: Build Flutter Web
+#         run: flutter build web
