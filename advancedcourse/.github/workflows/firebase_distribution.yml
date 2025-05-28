@@ -3,7 +3,7 @@ name: Firebase App Distribution
 on:
   push:
     branches:
-      - development # Trigger this workflow only on push to main branch
+      - main # Trigger this workflow only on push to main branch
 
 jobs:
   Distribute to Firebase:  
@@ -19,7 +19,7 @@ jobs:
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1.0'  # Specify your Ruby version here
+          ruby-version: '3.4.4'  # Specify your Ruby version here
           bundler-cache: true
           working-directory: android
 
@@ -27,13 +27,13 @@ jobs:
       - name: Set up JDK 11
         uses: actions/setup-java@v3
         with:
-          java-version: '11' # Specify the JDK version here (e.g., '11', '17', etc.)
+          java-version: '22.0.1' # Specify the JDK version here (e.g., '11', '17', etc.)
           distribution: 'adoptopenjdk'  # You can use 'adoptopenjdk', 'zulu', 'openjdk', etc.
       # Step: Install Flutter
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.10.0' # You can specify any stable or specific version of Flutter
+          flutter-version: '3.32.0' # You can specify any stable or specific version of Flutter
      
 
       # Step 7: Run Fastlane for Firebase App Distribution
