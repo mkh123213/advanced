@@ -1,45 +1,27 @@
-name: Firebase App Distribution
+# File: .github/workflows/ci.yml
+
+name: CI for Development
 
 on:
   push:
     branches:
-      - development # Trigger this workflow only on push to main branch
+      - development
 
 jobs:
-  Distribute to Firebase:  
-    build:
-      runs-on: ubuntu-latest
-      steps:
-    
-      # Step 1: Checkout the code
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
-      # Step 2: Set up Ruby environment
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          ruby-version: '3.1.0'  # Specify your Ruby version here
-          bundler-cache: true
-          working-directory: android
+          node-version: 18
 
-      # Step 2: Set up JDK 
-      - name: Set up JDK 11
-        uses: actions/setup-java@v3
-        with:
-          java-version: '11' # Specify the JDK version here (e.g., '11', '17', etc.)
-          distribution: 'adoptopenjdk'  # You can use 'adoptopenjdk', 'zulu', 'openjdk', etc.
-      # Step: Install Flutter
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.10.0' # You can specify any stable or specific version of Flutter
-     
+      - name: Install dependencies
+        run: npm install
 
-      # Step 7: Run Fastlane for Firebase App Distribution
-      - name: Distribute to Firebase
-        run: |
-          fastlane android firebase_app_distribution
-        env:
-          TOKEN: ${{ secrets.TOKEN }}
-        working-directory: android
+      - name: Run tests
+        run: npm test
