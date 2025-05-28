@@ -32,7 +32,7 @@ jobs:
         
     - name: Build and Distribute App
       env:
-        TOKEN: ${{ secrets.TOKEN }}
+        firebase_cli_token: ${{ secrets.TOKEN }}
       run: |
         bundle exec fastlane android beta
       working-directory: android
