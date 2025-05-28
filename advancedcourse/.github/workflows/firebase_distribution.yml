@@ -38,8 +38,8 @@ jobs:
 
       # Step 7: Run Fastlane for Firebase App Distribution
       - name: Distribute to Firebase
-        run: 
-          fastlane firebase_app_distribution
+        run: |
+          fastlane android firebase_app_distribution
         env:
           TOKEN: ${{ secrets.TOKEN }}
         working-directory: android
