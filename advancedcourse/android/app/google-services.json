@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "635886397092",
+    "project_id": "advanced-fff19",
+    "storage_bucket": "advanced-fff19.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:635886397092:android:56330f34afb9651c2b2831",
+        "android_client_info": {
+          "package_name": "com.example.advancedcourse"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7SHQ-C0RD01bSuvEU_eHq7EBq_KBNxlQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
