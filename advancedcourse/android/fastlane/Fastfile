@@ -11,7 +11,7 @@ platform :android do
     firebase_app_distribution(
       app: "1:635886397092:android:56330f34afb9651c2b2831",
 
-      firebase_cli_token: '1//095o7uECODgmsCgYIARAAGAkSNwF-L9IrMNXydzDZ7fBFKHoJMs0Chr9L01KvogQV353wDYtR2rfZTtTpD5MEPCQlIUfUpx0leXI',
+      firebase_cli_token: Env("TOKEN"),
       android_artifact_path: "../build/app/outputs/apk/release/app-release.apk",
       testers: "sa.mohammad7567@gmail.com",
       release_notes: "please update to Version 1.4.0+1"
