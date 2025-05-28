@@ -1,8 +1,9 @@
-name: Android Fastlane with Firebase App Distribution Workflow
 on:
-  push:
-    branches:
-      - main
+    push:
+      branches:
+        - development
+    workflow_dispatch: # allows you to run it manually from GitHub UI
+  
 
 jobs:
   distribute_to_firebase:
