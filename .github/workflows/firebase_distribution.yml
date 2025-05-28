@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - development
-  workflow_dispatch: # allows you to run it manually from GitHub UI
+   # allows you to run it manually from GitHub UI
 
 
 jobs:
