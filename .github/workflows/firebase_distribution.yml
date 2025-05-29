@@ -31,8 +31,9 @@ jobs:
         working-directory: advancedcourse/android
         
     - name: Build and Distribute App
+      
       env:
-        firebase_cli_token: ${{ secrets.TOKEN }}
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       run: |
         bundle exec fastlane android beta
       working-directory: advancedcourse/android
