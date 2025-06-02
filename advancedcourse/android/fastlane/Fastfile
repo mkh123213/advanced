@@ -6,7 +6,7 @@ platform :android do
   desc "Runs all the tests"
   lane :beta do
     sh "flutter clean"
-    sh "flutter build apk --release"
+    sh "flutter build apk --flavor development -t lib/main_development.dart"
   
     firebase_app_distribution(
       app: "1:635886397092:android:56330f34afb9651c2b2831",
