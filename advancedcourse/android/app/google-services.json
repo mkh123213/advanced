@@ -1,21 +1,40 @@
 {
   "project_info": {
-    "project_number": "635886397092",
-    "project_id": "advanced-fff19",
-    "storage_bucket": "advanced-fff19.firebasestorage.app"
+    "project_number": "595339030883",
+    "project_id": "advanced1-f7ff3",
+    "storage_bucket": "advanced1-f7ff3.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:635886397092:android:56330f34afb9651c2b2831",
+        "mobilesdk_app_id": "1:595339030883:android:8a46b7e8dd392d5ea9a356",
         "android_client_info": {
-          "package_name": "com.example.advancedcourse"
+          "package_name": "com.example.app.dev"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB7SHQ-C0RD01bSuvEU_eHq7EBq_KBNxlQ"
+          "current_key": "AIzaSyDXW6oolqAX6gmBCOYGD5dBbi9iuFysYWI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:595339030883:android:0597b6dc7022381ea9a356",
+        "android_client_info": {
+          "package_name": "com.example.app.prod"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXW6oolqAX6gmBCOYGD5dBbi9iuFysYWI"
         }
       ],
       "services": {

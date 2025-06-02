@@ -5,28 +5,29 @@ class ValidatePassword extends StatelessWidget {
   const ValidatePassword(
       {super.key,
       required this.hasNumber,
-      required this.hasSpecialChar,
-      required this.hasUppercase,
-      required this.hasLowercase,
-      required this.isLongEnough});
+      required this.hasSpecialCharacters,
+      required this.hasUpperCase,
+      required this.hasLowerCase,
+      required this.hasMinLength});
   final bool hasNumber;
-  final bool hasSpecialChar;
+  final bool hasSpecialCharacters;
 
-  final bool hasUppercase;
+  final bool hasUpperCase;
 
-  final bool hasLowercase;
+  final bool hasLowerCase;
 
-  final bool isLongEnough;
+  final bool hasMinLength;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         buildValidationRow(text: 'has number', isValid: hasNumber),
-        buildValidationRow(text: 'hasSpecialChar', isValid: hasSpecialChar),
-        buildValidationRow(text: 'hasUppercase', isValid: hasUppercase),
-        buildValidationRow(text: 'hasLowercase', isValid: hasLowercase),
-        buildValidationRow(text: 'isLongEnough', isValid: isLongEnough),
+        buildValidationRow(
+            text: 'hasSpecialChar', isValid: hasSpecialCharacters),
+        buildValidationRow(text: 'hasUppercase', isValid: hasUpperCase),
+        buildValidationRow(text: 'hasLowercase', isValid: hasLowerCase),
+        buildValidationRow(text: 'isLongEnough', isValid: hasMinLength),
       ],
     );
   }
