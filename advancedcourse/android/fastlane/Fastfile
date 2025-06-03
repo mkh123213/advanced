@@ -9,7 +9,7 @@ platform :android do
     sh "flutter build apk --flavor development -t lib/main_development.dart"
   
     firebase_app_distribution(
-      app: "1:595339030883:android:8a46b7e8dd392d5ea9a356",
+      app: "1:595339030883:android:0115bbd30dd81bfda9a356",
 
       firebase_cli_token: ENV["FIREBASE_TOKEN"],
 
